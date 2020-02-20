@@ -403,7 +403,7 @@ And the formal definition of the BIMI Location Header, using ABNF, is as follows
 Header Signing
 ---------------
 
-The BIMI-Selector SHOULD be signed by DKIM.
+The BIMI-Selector SHOULD be signed by DKIM using a key in the same organisational domain as the domain in the RFC5322.From header.
 
 The BIMI-Location header MUST NOT be DKIM signed. This header is untrusted by definition, and is only for use between an MTA and its MUAs, after DKIM has been validated by the MTA. Therefore, signing this header is meaningless, and any messages with it signed are either coming from malicious or misconfigured third parties.
 
